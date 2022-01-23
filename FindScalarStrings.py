@@ -10,7 +10,6 @@
 # @menupath
 # @toolbar
 
-from pprint import pprint
 from ghidra.program.model.lang import OperandType
 
 def isUTF8(data):
