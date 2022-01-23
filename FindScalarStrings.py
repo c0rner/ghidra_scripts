@@ -12,7 +12,7 @@
 
 from ghidra.program.model.lang import OperandType
 
-def isUTF8(data):
+def is_utf8(data):
     """ Verify data is valid UTF-8
     
     Args:
@@ -28,7 +28,7 @@ def isUTF8(data):
         return False
     return True
 
-def isAscii(data):
+def is_ascii(data):
     """ Verify data is printable/readable ASCII
 
     Args:
@@ -56,7 +56,7 @@ def x86_find_scalar_string(inst):
         if OperandType.isScalar(inst.getOperandType(1)):
             data = inst.getOpObjects(1)[0].byteArrayValue()
             # Check immediate value for readable ASCII
-            if len(data) > 1 and isAscii(data):
+            if len(data) > 1 and is_ascii(data):
                 # Reverse and convert to string
                 return data[::-1].tostring()
     return None
