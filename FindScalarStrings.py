@@ -10,6 +10,7 @@
 # @menupath
 # @toolbar
 
+from __main__ import currentProgram,getMemoryBlock,monitor
 from ghidra.program.model.lang import OperandType
 
 def is_utf8(data):
